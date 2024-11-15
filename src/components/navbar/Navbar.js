@@ -4,7 +4,16 @@ import { FiMenu } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { logo } from "../../assets/index";
-import { navLinksdata } from '../../constants';
+
+const navLinksdata = [
+  { _id: 1, title: "Home", link: "home" },
+  { _id: 2, title: "Features", link: "features" },
+  { _id: 3, title: "Projects", link: "projects" },
+  { _id: 4, title: "Resume", link: "resume" },
+  { _id: 5, title: "Testimonial", link: "testimonial" },
+  { _id: 6, title: "Contact", link: "contact" },
+  { _id: 7, title: "Blog", link: "blog" },
+];
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -45,9 +54,7 @@ const Navbar = () => {
               <div>
                 <img className="w-32" src={logo} alt="logo" />
                 <p className="text-sm text-gray-400 mt-2">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Earum soluta perspiciatis molestias enim cum repellat, magnam
-                  exercitationem distinctio aliquid nam.
+                  Connecting people through impactful communication and advocacy.
                 </p>
               </div>
               <ul className="flex flex-col gap-4">
@@ -75,12 +82,12 @@ const Navbar = () => {
                   Find me in
                 </h2>
                 <div className="flex gap-4">
-                  <a href="https://www.linkedin.com/in/helena-amoah?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.linkedin.com/in/helena-amoah" target="_blank" rel="noopener noreferrer">
                     <span className="bannerIcon">
                       <FaLinkedinIn />
                     </span>
                   </a>
-                  <a href="https://www.facebook.com/helena.amoah.73?mibextid=JRoKGi" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.facebook.com/helena.amoah.73" target="_blank" rel="noopener noreferrer">
                     <span className="bannerIcon">
                       <FaFacebookF />
                     </span>
@@ -90,7 +97,7 @@ const Navbar = () => {
                       <FaTwitter />
                     </span>
                   </a>
-                  <a href="https://www.instagram.com/abaappiatewaa?igsh=MTgwMHBvZGFiZnl2eQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.instagram.com/abaappiatewaa" target="_blank" rel="noopener noreferrer">
                     <span className="bannerIcon">
                       <FaInstagram />
                     </span>
