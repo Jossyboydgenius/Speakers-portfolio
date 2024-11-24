@@ -69,7 +69,7 @@ const LeftBanner = () => {
             </a>
           </div>
         </div>
-        <div>
+        {/* <div>
           <h2 className="text-base uppercase font-titleFont mb-4">
             EXPERTISE IN
           </h2>
@@ -87,7 +87,7 @@ const LeftBanner = () => {
               <FaUsers />
             </span>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
