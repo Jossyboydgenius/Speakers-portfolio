@@ -11,8 +11,8 @@ const navLinksdata = [
   { _id: 3, title: "Projects", link: "projects" },
   { _id: 4, title: "Resume", link: "resume" },
   { _id: 5, title: "Testimonial", link: "testimonial" },
-  { _id: 6, title: "Contact", link: "contact" },
-  { _id: 7, title: "Blog", link: "blog" },
+  { _id: 6, title: "Blog", link: "blog" },
+  { _id: 7, title: "Contact", link: "contact" },
 ];
 
 const Navbar = () => {
