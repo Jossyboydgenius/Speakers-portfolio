@@ -12,9 +12,10 @@ const Features = () => {
       <Title title="Features" des="What I Do" />
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-20">
         <Card
-          title="MCing and Moderation"
-          des="Providing professional and engaging hosting services for your events, 
-          ensuring a smooth and memorable experience for all attendees. Facilitating discussions that bring out the best in panelists, ensuring a balanced and productive dialogue that keeps the audience engaged."
+          title="Master of Ceremonies (MC) & Moderation"
+          des="Providing professional and engaging hosting services for your events, ensuring a smooth and
+          memorable experience for all attendees. Facilitating discussions that bring out the best in panellists,
+          ensuring a balanced and productive dialogue that keeps the audience engaged."
           icon={<FaMicrophone />}
         />
         <Card
@@ -43,14 +44,17 @@ const Features = () => {
         />
         <Card
           title="Freelance Writing"
-          des="Creating engaging and well-researched content for various platforms, 
-          including blogs, articles, and social media, tailored to meet the needs of clients."
+          des="I deliver high-quality, compelling content tailored to your unique needs. Whether it’s articles, blogs,
+          reports, or creative pieces, I bring clarity, originality, and professionalism to every project. My
+          writing is driven by research, audience understanding, and a passion for storytelling, ensuring your
+          message stands out and makes an impact."
           icon={<FaLaptop />}
         />
         <Card
           title="Digital Marketing"
-          des="Developing and implementing effective digital marketing strategies, 
-          including SEO, social media marketing, and content marketing, to enhance online presence and drive engagement."
+          des="Crafting and executing data-driven digital marketing strategies that amplify visibility and drive
+          engagement. From social media management and content creation Digital Marketing. My digital
+          campaign skills resonate with your audience and align with your objectives."
           icon={<FaChartLine />}
         />
       </div>
