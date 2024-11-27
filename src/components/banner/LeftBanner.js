@@ -36,9 +36,9 @@ const LeftBanner = () => {
           />
         </h2>
         <p className="text-base font-bodyFont leading-6 tracking-wide">
-        I have a strong background in media relations, public speaking, and project management. 
-        I founded the Get Out Of Depression (GOOD) Foundation and work on SDGs such as health,
-        gender equality, and climate action.
+        I have a strong background in copywriting, media relations, digital marketing, public speaking, and
+        development advocacy. I founded the Get Out Of Depression (GOOD) Foundation and work on SDGs
+        such as health, gender equality, and climate action.
         </p>
       </div>
       <div className="flex flex-col xl:flex-row gap-6 lgl:gap-0 justify-between">
