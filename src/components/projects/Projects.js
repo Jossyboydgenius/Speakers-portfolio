@@ -28,7 +28,9 @@ const Projects = () => {
         />
         <ProjectsCard
           title="CAMFED Ghana - Girls' Empowerment Sessions"
-          des="Conducted mentorship sessions focused on self-development, life skills, and sexual and reproductive health for junior high students, fostering empowerment and education for young girls in Ghana."
+          des="Mentoring sessions for girls and young women under the CAMFED transition guide and the learner
+          guide programs, focused on self-development, life skills, and sexual and reproductive health for
+          junior high students, fostering empowerment and education for young girls in Ghana."
           src={projectThree}
         />
         <ProjectsCard
@@ -38,12 +40,32 @@ const Projects = () => {
         />
         <ProjectsCard
           title="Sustainable Development Goal (SDG) Advocacy"
-          des="Directed communications for SDG Ambassadors Ghana, focusing on youth engagement and sustainable development advocacy, collaborating with organizations like Pearson Edexcel and Access Bank Ghana."
+          des="Directed communications for SDG Ambassadors Ghana, focusing on youth engagement and
+          sustainable development advocacy, collaborating with organizations. Volunteers with SDG-driven
+          organizations to organize and implement activities on Gender development, good health and
+          wellbeing and climate change."
+          src={projectOne}
+        />
+        <ProjectsCard
+          title="Children and Youth Advocate"
+          des="Hosting and assisting with production of engaging youth advocacy radio and TV programs on GBC
+          with Curious Minds Ghana, addressing social issues and encouraging meaningful youth participation
+          in national conversations."
           src={projectOne}
         />
         <ProjectsCard
           title="Abantu for Development Campaign"
           des="Created digital media content, including over 15 graphic designs, for the SWARELG campaign to promote women’s representation in local governance, driving community impact through effective visual storytelling."
+          src={projectTwo}
+        />
+        <ProjectsCard
+          title="Digital Campaigns"
+          des="Using my social media handles to talk about national issues like illegal mining, volunteered and
+          assisted with implementation of digitals campaigns for 2023 16 DAYS OF ACTIVISM, 2024 Zero
+          discrimination Day and World Malaria Day, which including TV and radio tours, article publications
+          and social media campaigns with Curious Minds Ghana. As well as SWARELG campaign to promote
+          women’s representation in local governance, driving community impact through effective visual
+          storytelling by Abuntu for Development."
           src={projectTwo}
         />
       </div>
