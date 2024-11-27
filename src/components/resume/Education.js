@@ -19,7 +19,8 @@ const Education = () => {
           <ResumeCard
             title="Bachelor's in Communication Studies"
             subTitle="University of Media, Arts & Communication - (2019 - 2023)"
-            result="GPA: 3.8"
+            // result="GPA: 3.8"
+            result="Ghana"
             des="Specialized in journalism with a focus on advocacy and behavioral change communication towards sustainable development."
           />
         </div>
