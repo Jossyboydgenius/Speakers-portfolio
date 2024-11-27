@@ -34,11 +34,6 @@ const Projects = () => {
           src={projectThree}
         />
         <ProjectsCard
-          title="World Malaria Day Digital Campaign"
-          des="Led a digital campaign for World Malaria Day, creating trending hashtags and coordinating social media interactions that achieved over 50K engagements, amplifying awareness on malaria prevention."
-          src={projectThree}
-        />
-        <ProjectsCard
           title="Sustainable Development Goal (SDG) Advocacy"
           des="Directed communications for SDG Ambassadors Ghana, focusing on youth engagement and
           sustainable development advocacy, collaborating with organizations. Volunteers with SDG-driven
@@ -52,11 +47,6 @@ const Projects = () => {
           with Curious Minds Ghana, addressing social issues and encouraging meaningful youth participation
           in national conversations."
           src={projectOne}
-        />
-        <ProjectsCard
-          title="Abantu for Development Campaign"
-          des="Created digital media content, including over 15 graphic designs, for the SWARELG campaign to promote women’s representation in local governance, driving community impact through effective visual storytelling."
-          src={projectTwo}
         />
         <ProjectsCard
           title="Digital Campaigns"
