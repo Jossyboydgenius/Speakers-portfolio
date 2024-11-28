@@ -31,7 +31,7 @@ const Resume = () => {
               educationData
                 ? "border-designColor rounded-lg"
                 : "border-transparent"
-            } resumeLi`}
+            } resumeLi rounded-lg`}
           >
             Education
           </li>
@@ -45,7 +45,7 @@ const Resume = () => {
             }
             className={`${
               skillData ? "border-designColor rounded-lg" : "border-transparent"
-            } resumeLi`}
+            } resumeLi rounded-lg`}
           >
             Professional Skills
           </li> */}
@@ -60,7 +60,7 @@ const Resume = () => {
               experienceData
                 ? "border-designColor rounded-lg"
                 : "border-transparent"
-            } resumeLi`}
+            } resumeLi rounded-lg`}
           >
             Experience
           </li>
@@ -75,7 +75,7 @@ const Resume = () => {
               achievementData
                 ? "border-designColor rounded-lg"
                 : "border-transparent"
-            } resumeLi`}
+            } resumeLi rounded-lg`}
           >
             Achievements
           </li>
@@ -90,17 +90,19 @@ const Resume = () => {
               volunteeringData
                 ? "border-designColor rounded-lg"
                 : "border-transparent"
-            } resumeLi`}
+            } resumeLi rounded-lg`}
           >
             Volunteering
           </li>
         </ul>
       </div>
-      {educationData && <Education />}
-      {/* {skillData && <Skills />} */}
-      {achievementData && <Achievement />}
-      {experienceData && <Experience />}
-      {volunteeringData && <Volunteering />}
+      <div className="rounded-lg">
+        {educationData && <Education />}
+        {/* {skillData && <Skills />} */}
+        {achievementData && <Achievement />}
+        {experienceData && <Experience />}
+        {volunteeringData && <Volunteering />}
+      </div>
     </section>
   );
 }
