@@ -1,6 +1,6 @@
 import React from 'react'
 import Title from '../layouts/Title'
-import { projectOne, projectTwo, projectThree } from "../../assets/index";
+import { projectOne, projectTwo, projectThree, projectFour, projectFive, projectSix } from "../../assets/index";
 import ProjectsCard from './ProjectsCard';
 
 const Projects = () => {
@@ -23,7 +23,7 @@ const Projects = () => {
         />
         <ProjectsCard
           title="Youth Advocacy Media Programs"
-          des="Hosted and produced engaging youth advocacy radio and TV programs on GBC and Curious Minds Ghana, addressing social issues and encouraging youth involvement in national conversations."
+          des="Hosted and produced engaging youth advocacy radio and TV programs on GBC and Curious Minds in Ghana, addressing social issues and encouraging youth involvement in national conversations."
           src={projectTwo}
         />
         <ProjectsCard
@@ -39,14 +39,14 @@ const Projects = () => {
           sustainable development advocacy, collaborating with organizations. Volunteers with SDG-driven
           organizations to organize and implement activities on Gender development, good health and
           wellbeing and climate change."
-          src={projectOne}
+          src={projectFour}
         />
         <ProjectsCard
           title="Children and Youth Advocate"
           des="Hosting and assisting with production of engaging youth advocacy radio and TV programs on GBC
           with Curious Minds Ghana, addressing social issues and encouraging meaningful youth participation
           in national conversations."
-          src={projectOne}
+          src={projectFive}
         />
         <ProjectsCard
           title="Digital Campaigns"
@@ -56,7 +56,7 @@ const Projects = () => {
           and social media campaigns with Curious Minds Ghana. As well as SWARELG campaign to promote
           women’s representation in local governance, driving community impact through effective visual
           storytelling by Abuntu for Development."
-          src={projectTwo}
+          src={projectSix}
         />
       </div>
     </section>
