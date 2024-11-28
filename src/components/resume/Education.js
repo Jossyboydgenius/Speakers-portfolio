@@ -44,6 +44,12 @@ const Education = () => {
             result="Ghana"
             des="Led youth engagement initiatives on radio and TV, promoting education and awareness on issues affecting young people."
           />
+          <ResumeCard
+            title="Communications and Marketing Executive"
+            subTitle="Africa Education Gateway (June 2024 – August 2024)"
+            result="Ghana"
+            des="Copywriting, organizational communication, email management and social media strategizing."
+          />
         </div>
       </div>
     </motion.div>
