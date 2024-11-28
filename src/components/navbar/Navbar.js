@@ -11,7 +11,7 @@ const navLinksdata = [
   { _id: 3, title: "Projects", link: "projects" },
   { _id: 4, title: "Resume", link: "resume" },
   { _id: 5, title: "Testimonial", link: "testimonial" },
-  { _id: 6, title: "Blog", link: "blog" },
+  // { _id: 6, title: "Blog", link: "blog" },
   { _id: 7, title: "Contact", link: "contact" },
 ];
 
@@ -29,16 +29,35 @@ const Navbar = () => {
               className="text-base font-normal text-gray-400 tracking-wide cursor-pointer hover:text-designColor duration-300"
               key={_id}
             >
-              <Link
-                activeClass="active"
-                to={link}
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-              >
-                {title}
-              </Link>
+              {title === "Contact" ? (
+                <div className="relative group">
+                  <Link
+                    activeClass="active"
+                    to={link}
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                    className="relative z-10 w-full h-full flex justify-center items-center transform transition-transform duration-300 group-hover:-translate-y-2"
+                  >
+                    <button className="w-full h-16 bg-gradient-to-r from-[#1e2024] to-[#202327] shadow-shadowOne text-designColor rounded-lg flex justify-center items-center px-6 hover:bg-designColor hover:text-white hover:bg-none duration-300">
+                      {title}
+                    </button>
+                  </Link>
+                  <div className="absolute bottom-0 w-full h-14 bg-gradient-to-r from-[#1e2024] to-[#202327] shadow-shadowOne rounded-lg transform transition-transform duration-300 group-hover:-translate-y-2"></div>
+                </div>
+              ) : (
+                <Link
+                  activeClass="active"
+                  to={link}
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                >
+                  {title}
+                </Link>
+              )}
             </li>
           ))}
         </ul>
