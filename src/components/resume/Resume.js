@@ -1,15 +1,18 @@
-import React, {  useState } from 'react'
+import React, { useState } from 'react';
 import Title from '../layouts/Title';
 import Education from './Education';
-import Skills from './Skills';
 import Achievement from './Achievement';
-import Experience from "./Experience"
+import Experience from "./Experience";
+import Volunteering from "./Volunteering";
+// import Skills from './Skills';
 
 const Resume = () => {
-   const [educationData, setEducationData] = useState(true);
-   const [skillData, setSkillData] = useState(false);
-   const [experienceData, setExperienceData] = useState(false);
-   const [achievementData, setAchievementData] = useState(false);
+  const [educationData, setEducationData] = useState(true);
+  // const [skillData, setSkillData] = useState(false);
+  const [experienceData, setExperienceData] = useState(false);
+  const [achievementData, setAchievementData] = useState(false);
+  const [volunteeringData, setVolunteeringData] = useState(false);
+
   return (
     <section id="resume" className="w-full py-20 border-b-[1px] border-b-black">
       <div className="flex justify-center items-center text-center">
@@ -20,9 +23,9 @@ const Resume = () => {
           <li
             onClick={() =>
               setEducationData(true) &
-              setSkillData(false) &
               setExperienceData(false) &
-              setAchievementData(false)
+              setAchievementData(false) &
+              setVolunteeringData(false)
             }
             className={`${
               educationData
@@ -32,25 +35,26 @@ const Resume = () => {
           >
             Education
           </li>
-          <li
+          {/* <li
             onClick={() =>
               setEducationData(false) &
               setSkillData(true) &
               setExperienceData(false) &
-              setAchievementData(false)
+              setAchievementData(false) &
+              setVolunteeringData(false)
             }
             className={`${
               skillData ? "border-designColor rounded-lg" : "border-transparent"
             } resumeLi`}
           >
             Professional Skills
-          </li>
+          </li> */}
           <li
             onClick={() =>
               setEducationData(false) &
-              setSkillData(false) &
               setExperienceData(true) &
-              setAchievementData(false)
+              setAchievementData(false) &
+              setVolunteeringData(false)
             }
             className={`${
               experienceData
@@ -63,9 +67,9 @@ const Resume = () => {
           <li
             onClick={() =>
               setEducationData(false) &
-              setSkillData(false) &
               setExperienceData(false) &
-              setAchievementData(true)
+              setAchievementData(true) &
+              setVolunteeringData(false)
             }
             className={`${
               achievementData
@@ -75,15 +79,30 @@ const Resume = () => {
           >
             Achievements
           </li>
+          <li
+            onClick={() =>
+              setEducationData(false) &
+              setExperienceData(false) &
+              setAchievementData(false) &
+              setVolunteeringData(true)
+            }
+            className={`${
+              volunteeringData
+                ? "border-designColor rounded-lg"
+                : "border-transparent"
+            } resumeLi`}
+          >
+            Volunteering
+          </li>
         </ul>
       </div>
       {educationData && <Education />}
-      {skillData && <Skills />}
+      {/* {skillData && <Skills />} */}
       {achievementData && <Achievement />}
       {experienceData && <Experience />}
- 
+      {volunteeringData && <Volunteering />}
     </section>
   );
 }
 
-export default Resume
+export default Resume;
