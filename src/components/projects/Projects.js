@@ -1,6 +1,6 @@
 import React from 'react'
 import Title from '../layouts/Title'
-import { projectOne, projectTwo, projectThree, projectFour, projectFive, projectSix } from "../../assets/index";
+import { projectOne, projectTwo, projectThree, projectFour, projectFive, projectSix, projectNine } from "../../assets/index";
 import ProjectsCard from './ProjectsCard';
 
 const Projects = () => {
@@ -18,13 +18,17 @@ const Projects = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-14">
         <ProjectsCard
           title="Get Out of Depression (GOOD) Foundation"
-          des="Led strategic development and digital marketing campaigns for the foundation, impacting over 6000 individuals through mental health projects and partnerships with institutions like the University of South Florida."
+          des="Led strategic development and digital marketing campaigns for the foundation, 
+          impacting over 6000 individuals through mental health projects and partnerships with institutions like the University of South Florida."
           src={projectOne}
         />
         <ProjectsCard
-          title="Youth Advocacy Media Programs"
-          des="Hosted and produced engaging youth advocacy radio and TV programs on GBC and Curious Minds in Ghana, addressing social issues and encouraging youth involvement in national conversations."
-          src={projectTwo}
+          title="Gender Equality advocacy"
+          des="Advocating for Gender Equality through media (traditional and digital) and in person programs that will promote the Sustainable Development Goal 5.
+          My actions in support of gender equality over the years have included assisting production of the Gender and Development radio program at GBC, 
+          participating in activities and campaigns by Abuntu for Development, Affirmative Action Coalition, 
+          Women in Broadcasting and CAMFED/MasterCard as well as writing articles to highlight actions and the need for Gender equality."
+          src={projectNine}
         />
         <ProjectsCard
           title="CAMFED Ghana - Girls' Empowerment Sessions"
@@ -46,7 +50,7 @@ const Projects = () => {
           des="Hosting and assisting with production of engaging youth advocacy radio and TV programs on GBC
           with Curious Minds Ghana, addressing social issues and encouraging meaningful youth participation
           in national conversations."
-          src={projectFive}
+          src={projectTwo}
         />
         <ProjectsCard
           title="Digital Campaigns"
