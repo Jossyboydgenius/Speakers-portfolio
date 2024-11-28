@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaMicrophone, FaPodcast, FaComments, FaBullhorn, FaPenNib, FaUsers, FaLaptop, FaChartLine } from "react-icons/fa";
+import { FaMicrophone, FaPodcast, FaComments, FaBullhorn, FaPenNib, FaUsers, FaLaptop, FaChartLine, FaCalendarAlt, FaNewspaper } from "react-icons/fa";
 import Title from '../layouts/Title';
 import Card from './Card';
 
@@ -56,6 +56,18 @@ const Features = () => {
           engagement. From social media management and content creation Digital Marketing. My digital
           campaign skills resonate with your audience and align with your objectives."
           icon={<FaChartLine />}
+        />
+        <Card
+          title="Event Planning"
+          des="Organizing and coordinating events to ensure they run smoothly and successfully. 
+          From concept to execution, I handle all aspects of event planning to create memorable experiences."
+          icon={<FaCalendarAlt />}
+        />
+        <Card
+          title="Media Relations"
+          des="Building and maintaining relationships with media outlets to ensure positive coverage and effective communication of your message. 
+          I manage press releases, media inquiries, and public relations strategies."
+          icon={<FaNewspaper />}
         />
       </div>
     </section>
