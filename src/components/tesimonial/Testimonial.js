@@ -122,10 +122,11 @@ const Testimonial = () => {
                   <div className="flex flex-col justify-between lgl:items-center py-6 border-b-2 border-b-gray-900">
                     <div>
                       <h3 className="text-xl lgl:text-2xl font-medium tracking-wide">
-                        Travel Mobile App Design.
+                      Communications and Advocacy Manager
+                      Curious Minds Ghana
                       </h3>
                       <p className="text-base text-gray-400 mt-3">
-                        via Upwork - Mar 4, 2015 - Aug 30, 2021 test
+                        {/* via Upwork - Mar 4, 2015 - Aug 30, 2021 test */}
                       </p>
                     </div>
                     <div className="text-yellow-500 flex gap-1">
@@ -137,11 +138,9 @@ const Testimonial = () => {
                     </div>
                   </div>
                   <p className="text-base font-titleFont text-gray-400 font-medium tracking-wide leading-6">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
-                    dolorum, eos natus ipsum numquam veniam officia
-                    necessitatibus ratione quos debitis exercitationem
-                    repudiandae facilis id neque nihil accusantium perspiciatis
-                    repellat? Iste.
+                  Helena is an exceptional communications professional with a unique ability to craft compelling narratives that resonate with diverse audiences. Her creativity, strategic thinking, 
+                  and attention to detail consistently elevated our communications campaigns, while her collaborative spirit made her a pleasure to work with. 
+                  I highly recommend her for any role requiring expertise in communications, media and engagement.
                   </p>
                 </div>
               </div>
@@ -163,7 +162,7 @@ const Testimonial = () => {
                   </p>
                   <h3 className="text-2xl font-bold">Jone Duone Joe</h3>
                   <p className="text-base tracking-wide text-gray-500">
-                    Operation Officer
+                    President
                   </p>
                 </div>
               </div>
@@ -173,10 +172,10 @@ const Testimonial = () => {
                   <div className="flex flex-col justify-between lgl:items-center py-6 border-b-2 border-b-gray-900">
                     <div>
                       <h3 className="text-xl lgl:text-2xl font-medium tracking-wide">
-                        Travel Mobile App Design.
+                      Get Out Of Depression Foundation
                       </h3>
                       <p className="text-base text-gray-400 mt-3">
-                        via Upwork - Mar 4, 2015 - Aug 30, 2021 test
+                        {/* via Upwork - Mar 4, 2015 - Aug 30, 2021 test */}
                       </p>
                     </div>
                     <div className="text-yellow-500 flex gap-1">
@@ -188,11 +187,10 @@ const Testimonial = () => {
                     </div>
                   </div>
                   <p className="text-base font-titleFont text-gray-400 font-medium tracking-wide leading-6">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
-                    dolorum, eos natus ipsum numquam veniam officia
-                    necessitatibus ratione quos debitis exercitationem
-                    repudiandae facilis id neque nihil accusantium perspiciatis
-                    repellat? Iste.
+                  Working with Helena Amoah at Get Out of depression foundation as the team lead has been an impactful moment. 
+                  She is selfless adaptable and a team player. She also has a holistic I can do spirit that inspires others to do more and achieve the purpose. 
+                  She is always on course to bring new and innovative ideas on board and carry out task effectively. 
+                  Her proactive approach and skills in carrying out project led her of being the face of GOOD foundation.
                   </p>
                 </div>
               </div>
