@@ -40,7 +40,7 @@ const Navbar = () => {
                     duration={500}
                     className="relative z-10 w-full h-full flex justify-center items-center transform transition-transform duration-300 group-hover:-translate-y-2"
                   >
-                    <button className="w-full h-16 bg-gradient-to-r from-[#1e2024] to-[#202327] shadow-shadowOne text-designColor rounded-lg flex justify-center items-center px-6 hover:bg-designColor hover:text-white hover:bg-none duration-300">
+                    <button className="w-full h-16 bg-gradient-to-r from-[#1e2024] to-[#202327] shadow-shadowOne text-designColor rounded-lg flex justify-center items-center px-6 hover:bg-gradient-to-r hover:from-[#be8c6c] hover:to-[#d4b08c] hover:text-white duration-300">
                       {title}
                     </button>
                   </Link>
