@@ -38,13 +38,13 @@ const Navbar = () => {
                     smooth={true}
                     offset={-70}
                     duration={500}
-                    className="relative z-10 w-full h-full flex justify-center items-center transform transition-transform duration-300 group-hover:-translate-y-2"
+                    className="relative z-10 w-full h-full flex justify-center items-center transform transition-transform duration-300 group-hover:-translate-y-1"
                   >
                     <button className="w-full h-16 bg-gradient-to-r from-[#1e2024] to-[#202327] shadow-shadowOne text-designColor rounded-lg flex justify-center items-center px-6 hover:bg-gradient-to-r hover:from-[#be8c6c] hover:to-[#d4b08c] hover:text-white duration-300">
                       {title}
                     </button>
                   </Link>
-                  <div className="absolute bottom-0 w-full h-14 bg-gradient-to-r from-[#1e2024] to-[#202327] shadow-shadowOne rounded-lg transform transition-transform duration-300 group-hover:-translate-y-2"></div>
+                  <div className="absolute bottom-0 w-full h-14 bg-gradient-to-r from-[#1e2024] to-[#202327] shadow-shadowOne rounded-lg transform transition-transform duration-300 group-hover:-translate-y-1"></div>
                 </div>
               ) : (
                 <Link
