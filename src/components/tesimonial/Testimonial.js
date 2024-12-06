@@ -112,7 +112,7 @@ const Testimonial = () => {
                   </p>
                   <h3 className="text-2xl font-bold">Michael Tetteh Doku</h3>
                   <p className="text-base tracking-wide text-gray-500">
-                    Operation Officer
+                  Communications and Advocacy Manager
                   </p>
                 </div>
               </div>
@@ -122,7 +122,6 @@ const Testimonial = () => {
                   <div className="flex flex-col justify-between lgl:items-center py-6 border-b-2 border-b-gray-900">
                     <div>
                       <h3 className="text-xl lgl:text-2xl font-medium tracking-wide">
-                      Communications and Advocacy Manager
                       Curious Minds Ghana
                       </h3>
                       <p className="text-base text-gray-400 mt-3">
