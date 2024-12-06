@@ -19,7 +19,7 @@ const Resume = () => {
         <Title title="5+ YEARS OF EXPERIENCE" des="My Resume" />
       </div>
       <div>
-        <ul className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
+        <ul className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-0">
           <li
             onClick={() =>
               setEducationData(true) &
@@ -27,11 +27,11 @@ const Resume = () => {
               setAchievementData(false) &
               setVolunteeringData(false)
             }
-            className={`${
+            className={`relative group cursor-pointer flex justify-center items-center px-6 py-8 rounded-lg ${
               educationData
-                ? "border-designColor rounded-lg"
-                : "border-transparent"
-            } resumeLi rounded-lg`}
+                ? "bg-gradient-to-r from-[#be8c6c] to-[#d4b08c] text-white"
+                : "bg-gradient-to-r from-[#1e2024] to-[#202327] text-designColor"
+            } hover:bg-gradient-to-r hover:from-[#be8c6c] hover:to-[#d4b08c] hover:text-white duration-300`}
           >
             Education
           </li>
@@ -43,9 +43,11 @@ const Resume = () => {
               setAchievementData(false) &
               setVolunteeringData(false)
             }
-            className={`${
-              skillData ? "border-designColor rounded-lg" : "border-transparent"
-            } resumeLi rounded-lg`}
+            className={`relative group cursor-pointer flex justify-center items-center px-6 py-8 rounded-lg ${
+              skillData
+                ? "bg-gradient-to-r from-[#be8c6c] to-[#d4b08c] text-white"
+                : "bg-gradient-to-r from-[#1e2024] to-[#202327] text-designColor"
+            } hover:bg-gradient-to-r hover:from-[#be8c6c] hover:to-[#d4b08c] hover:text-white duration-300`}
           >
             Professional Skills
           </li> */}
@@ -56,11 +58,11 @@ const Resume = () => {
               setAchievementData(false) &
               setVolunteeringData(false)
             }
-            className={`${
+            className={`relative group cursor-pointer flex justify-center items-center px-6 py-8 rounded-lg ${
               experienceData
-                ? "border-designColor rounded-lg"
-                : "border-transparent"
-            } resumeLi rounded-lg`}
+                ? "bg-gradient-to-r from-[#be8c6c] to-[#d4b08c] text-white"
+                : "bg-gradient-to-r from-[#1e2024] to-[#202327] text-designColor"
+            } hover:bg-gradient-to-r hover:from-[#be8c6c] hover:to-[#d4b08c] hover:text-white duration-300`}
           >
             Experience
           </li>
@@ -71,11 +73,11 @@ const Resume = () => {
               setAchievementData(true) &
               setVolunteeringData(false)
             }
-            className={`${
+            className={`relative group cursor-pointer flex justify-center items-center px-6 py-8 rounded-lg ${
               achievementData
-                ? "border-designColor rounded-lg"
-                : "border-transparent"
-            } resumeLi rounded-lg`}
+                ? "bg-gradient-to-r from-[#be8c6c] to-[#d4b08c] text-white"
+                : "bg-gradient-to-r from-[#1e2024] to-[#202327] text-designColor"
+            } hover:bg-gradient-to-r hover:from-[#be8c6c] hover:to-[#d4b08c] hover:text-white duration-300`}
           >
             Achievements
           </li>
@@ -86,17 +88,17 @@ const Resume = () => {
               setAchievementData(false) &
               setVolunteeringData(true)
             }
-            className={`${
+            className={`relative group cursor-pointer flex justify-center items-center px-6 py-8 rounded-lg ${
               volunteeringData
-                ? "border-designColor rounded-lg"
-                : "border-transparent"
-            } resumeLi rounded-lg`}
+                ? "bg-gradient-to-r from-[#be8c6c] to-[#d4b08c] text-white"
+                : "bg-gradient-to-r from-[#1e2024] to-[#202327] text-designColor"
+            } hover:bg-gradient-to-r hover:from-[#be8c6c] hover:to-[#d4b08c] hover:text-white duration-300`}
           >
             Volunteering
           </li>
         </ul>
       </div>
-      <div className="rounded-lg">
+      <div className="rounded-lg mt-8">
         {educationData && <Education />}
         {/* {skillData && <Skills />} */}
         {achievementData && <Achievement />}
