@@ -197,7 +197,7 @@ const Testimonial = () => {
           </div>
           {/* ================ Slider Three ================== */}
 
-          <div className="w-full">
+          {/* <div className="w-full">
             <div className="w-full h-auto flex flex-col lgl:flex-row justify-between">
               <div className="w-full lgl:w-[35%] h-full bg-gradient-to-r from-[#1e2024] to-[#23272b] p-8 rounded-lg shadow-shadowOne flex flex-col md:flex-row lgl:flex-col gap-8 justify-center md:justify-start lgl:justify-center">
                 <img
@@ -245,7 +245,7 @@ const Testimonial = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </Slider>
       </div>
     </section>
