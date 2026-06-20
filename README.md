@@ -1,70 +1,87 @@
-# Getting Started with Create React App
+# Helena Amoah - Professional Speakers Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A high-end, premium portfolio website designed for **Helena Amoah**, a Communications Specialist, SDG Ambassador, and Youth Advocate. Built in 2026, the website represents state-of-the-art web design aesthetics, incorporating elegant typography, glassmorphism panel styles, and smooth scroll animations.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🎨 Design System & Aesthetics
 
-### `npm start`
+1. **Elegant Typography**:
+   - **Headings**: Styled in **Georgia** (Serif) with editorial italic flourishes for names and section headers.
+   - **UI & Body Text**: Styled in **Outfit** (Sans-Serif) for a geometric, modern, and highly legible layout.
+2. **Glassmorphism Theme**:
+   - Deep premium dark background (`#090A0C`).
+   - Cards, timeline panels, and headers use semi-transparent backdrops (`bg-white/[0.01]`) wrapped in ultra-thin borders (`border border-white/5`), removing outdated neumorphic shadows.
+   - Accents highlighted in soft gold/bronze (`#be8c6c`).
+3. **Subtle Radial Glows**:
+   - Includes custom blurred backdrops behind key media assets to add depth.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## ✨ Features & Animations
 
-### `npm test`
+- **Scroll Progress Indicator**: A sleek gold-accented progress bar tracking reading position at the top of the screen.
+- **Scroll Reveal animations (Framer Motion)**: All grid cards, timeline rows, and headings slide up and fade in dynamically as they enter the viewport.
+- **Micro-interactions**: Subtle zoom and shadow offsets on hover for Features and Projects cards.
+- **Dynamic Typewriter**: Hero heading features an elegant typewriter effect showcasing key professional roles (MC, SDG Ambassador, Podcaster, etc.).
+- **Interactive Resume Selector**: Sleek pill-shaped tabs to filter by Education, Experience, Achievements, and Volunteering.
+- **Mobile Navigation Drawer**: Smooth slide-in glass drawer utilizing Framer Motion's `AnimatePresence`.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🛠️ Technology Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Framework**: [React](https://reactjs.org/) (initialized with `create-react-app`)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Animation**: [Framer Motion](https://www.framer.com/motion/)
+- **Slider**: [React Slick](https://react-slick.neostack.com/)
+- **Icons**: [React Icons](https://react-icons.github.io/react-icons/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🚀 Running the Project Locally
 
-### `npm run eject`
+### 1. Installation
+Clone the repository, navigate into the directory, and install dependencies:
+```bash
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 2. Run Development Server
+Run the local dev server (accessible at `http://localhost:3000`):
+```bash
+npm run dev
+# or
+npm start
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 3. Production Build
+Compile and bundle optimized static assets in the `build/` folder:
+```bash
+npm run build
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📁 File Structure
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```text
+├── public/                 # Static assets and index.html template
+├── src/
+│   ├── assets/             # Images, logos, and indexes
+│   ├── components/         # Reusable layouts and pages
+│   │   ├── banner/         # Banner components (LeftBanner, RightBanner)
+│   │   ├── contact/        # Contact components (Contact, ContactLeft)
+│   │   ├── features/       # Features grid components (Card, Features)
+│   │   ├── footer/         # Footer components (Footer, FooterBottom)
+│   │   ├── layouts/        # Layout elements (Title)
+│   │   ├── navbar/         # Navigation components (Navbar)
+│   │   ├── projects/       # Projects components (Projects, ProjectsCard)
+│   │   ├── resume/         # Timeline pages (Education, Experience, Achievement, Volunteering)
+│   │   └── testimonial/    # Slide carousel component (Testimonial)
+│   ├── constants/          # Configuration values
+│   ├── index.css           # Tailwind custom overrides & base layers
+│   └── App.js              # Application entry point
+├── package.json            # Scripts & dependencies
+└── tailwind.config.js      # Custom theme setup
+```
