@@ -1,33 +1,42 @@
 import React from 'react';
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { contactImg } from "../../assets/index";
+import { motion } from "framer-motion";
 
 const ContactLeft = () => {
   return (
-    <div className="w-full lgl:w-[35%] h-full bg-gradient-to-r from-[#1e2024] to-[#23272b] p-4 lgl:p-8 rounded-lg shadow-shadowOne flex flex-col gap-8 justify-center">
+    <motion.div 
+      initial={{ opacity: 0, x: -50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: false, amount: 0.15 }}
+      transition={{ duration: 0.6 }}
+      className="w-full lgl:w-[35%] bg-white/[0.01] border border-white/5 p-6 rounded-2xl flex flex-col gap-6 justify-center font-bodyFont"
+    >
       <img
-        className="w-full h-64 object-cover rounded-lg mb-2"
+        className="w-full h-52 object-cover rounded-xl border border-white/5"
         src={contactImg}
-        alt="contactImg"
+        alt="Helena Amoah"
       />
-      <div className="flex flex-col gap-4">
-        <h3 className="text-3xl font-bold text-white">Helena Amoah</h3>
-        <p className="text-lg font-normal text-gray-400">
+      <div className="flex flex-col gap-3">
+        <h3 className="text-2xl font-normal font-titleFont text-white italic">Helena Amoah</h3>
+        <p className="text-sm font-semibold text-designColor/90">
           Communications & Development Specialist
         </p>
-        <p className="text-base text-gray-400 tracking-wide">
+        <p className="text-sm font-light leading-relaxed text-gray-400">
           Experienced in advocacy, digital marketing, and mental health initiatives, with a strong focus on social change communication.
         </p>
-        <p className="text-base text-gray-400 flex items-center gap-2">
-          Phone: <span className="text-lightText">+233(0)543579809</span>
-        </p>
-        <p className="text-base text-gray-400 flex items-center gap-2">
-          Email: <span className="text-lightText">nanaabaappiatewaa@gmail.com</span>
-        </p>
+        <div className="flex flex-col gap-2 mt-2 border-t border-white/5 pt-4 text-sm font-light text-gray-400">
+          <p className="flex items-center gap-2">
+            Phone: <span className="text-white font-medium">+233(0)543579809</span>
+          </p>
+          <p className="flex items-center gap-2">
+            Email: <span className="text-white font-medium break-all">nanaabaappiatewaa@gmail.com</span>
+          </p>
+        </div>
       </div>
-      <div className="flex flex-col gap-4">
-        <h2 className="text-base uppercase font-titleFont mb-4">Find me in</h2>
-        <div className="flex gap-4">
+      <div className="flex flex-col gap-3 border-t border-white/5 pt-4">
+        <h2 className="text-xs uppercase font-semibold text-gray-400 tracking-wider">Find me in</h2>
+        <div className="flex gap-3">
           <a href="http://surl.li/sodnm" target="_blank" rel="noopener noreferrer">
             <span className="bannerIcon">
               <FaLinkedinIn />
@@ -50,7 +59,7 @@ const ContactLeft = () => {
           </a>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
