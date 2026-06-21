@@ -5,89 +5,66 @@ import {
   FaTwitter,
   FaLinkedinIn,
   FaInstagram,
-  FaMicrophone,
-  FaPenNib,
-  FaBullhorn,
-  FaUsers,
 } from "react-icons/fa";
 
 const LeftBanner = () => {
   const [text] = useTypewriter({
     words: ["a Communications Specialist.", "an SDG Ambassador.", "a Youth Advocate.", "a Podcaster.", "an MC."],
     loop: true,
-    typeSpeed: 20,
-    deleteSpeed: 10,
+    typeSpeed: 30,
+    deleteSpeed: 15,
     delaySpeed: 2000,
   });
 
   return (
-    <div className="w-full lgl:w-1/2 flex flex-col gap-20">
-      <div className="flex flex-col gap-5">
-        <h4 className=" text-lg font-normal">WELCOME TO MY WORLD</h4>
-        <h1 className="text-6xl font-bold text-white">
-          Hi, I'm <span className="text-designColor capitalize">Helena</span>
+    <div className="w-full lgl:w-1/2 flex flex-col gap-12 font-bodyFont">
+      <div className="flex flex-col gap-6">
+        <h4 className="text-xs tracking-[3px] uppercase font-semibold text-designColor/85">
+          WELCOME TO MY WORLD
+        </h4>
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-normal text-white leading-tight font-titleFont">
+          Hi, I'm <span className="text-designColor italic font-medium">Helena</span>
         </h1>
-        <h2 className="text-4xl font-bold text-white">
+        <h2 className="text-2xl md:text-3xl font-normal text-gray-300 font-titleFont italic h-16 md:h-12">
           <span>{text}</span>
           <Cursor
-            cursorBlinking="false"
+            cursorBlinking={true}
             cursorStyle="|"
-            cursorColor="#ff014f"
+            cursorColor="#be8c6c"
           />
         </h2>
-        <p className="text-base font-bodyFont leading-6 tracking-wide">
-        I have a strong background in copywriting, media relations, digital marketing, public speaking, and
-        development advocacy. I founded the Get Out Of Depression (GOOD) Foundation and work on SDGs
-        such as health, gender equality, and climate action.
+        <p className="text-sm md:text-base text-gray-400 leading-relaxed font-light tracking-wide max-w-[600px]">
+          I have a strong background in copywriting, media relations, digital marketing, public speaking, and
+          development advocacy. I founded the Get Out Of Depression (GOOD) Foundation and work on SDGs
+          such as health, gender equality, and climate action.
         </p>
       </div>
-      <div className="flex flex-col xl:flex-row gap-6 lgl:gap-0 justify-between">
-        <div>
-          <h2 className="text-base uppercase font-titleFont mb-4">
-            Find me in
-          </h2>
-          <div className="flex gap-4">
-            <a href="https://www.linkedin.com/in/helena-amoah" target="_blank" rel="noopener noreferrer">
-              <span className="bannerIcon">
-                <FaLinkedinIn />
-              </span>
-            </a>
-            <a href="https://www.facebook.com/helena.amoah.73" target="_blank" rel="noopener noreferrer">
-              <span className="bannerIcon">
-                <FaFacebookF />
-              </span>
-            </a>
-            <a href="http://twitter.com/appiatewaa" target="_blank" rel="noopener noreferrer">
-              <span className="bannerIcon">
-                <FaTwitter />
-              </span>
-            </a>
-            <a href="https://www.instagram.com/abaappiatewaa" target="_blank" rel="noopener noreferrer">
-              <span className="bannerIcon">
-                <FaInstagram />
-              </span>
-            </a>
-          </div>
+      <div className="flex flex-col gap-4 border-t border-white/5 pt-8">
+        <h2 className="text-xs uppercase font-semibold text-gray-400 tracking-wider">
+          Find me in
+        </h2>
+        <div className="flex gap-3">
+          <a href="https://www.linkedin.com/in/helena-amoah" target="_blank" rel="noopener noreferrer">
+            <span className="bannerIcon">
+              <FaLinkedinIn />
+            </span>
+          </a>
+          <a href="https://www.facebook.com/helena.amoah.73" target="_blank" rel="noopener noreferrer">
+            <span className="bannerIcon">
+              <FaFacebookF />
+            </span>
+          </a>
+          <a href="http://twitter.com/appiatewaa" target="_blank" rel="noopener noreferrer">
+            <span className="bannerIcon">
+              <FaTwitter />
+            </span>
+          </a>
+          <a href="https://www.instagram.com/abaappiatewaa" target="_blank" rel="noopener noreferrer">
+            <span className="bannerIcon">
+              <FaInstagram />
+            </span>
+          </a>
         </div>
-        {/* <div>
-          <h2 className="text-base uppercase font-titleFont mb-4">
-            EXPERTISE IN
-          </h2>
-          <div className="flex gap-4">
-            <span className="bannerIcon" title="Public Speaking">
-              <FaMicrophone />
-            </span>
-            <span className="bannerIcon" title="Content Creation">
-              <FaPenNib />
-            </span>
-            <span className="bannerIcon" title="Media Relations">
-              <FaBullhorn />
-            </span>
-            <span className="bannerIcon" title="Event Hosting">
-              <FaUsers />
-            </span>
-          </div>
-        </div> */}
       </div>
     </div>
   );
