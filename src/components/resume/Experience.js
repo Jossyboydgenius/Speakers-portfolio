@@ -7,14 +7,14 @@ const Experience = () => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { duration: 0.5 } }}
-      className="w-full flex flex-col lgl:flex-row gap-10 lgl:gap-20"
+      className="w-full flex flex-col lgl:flex-row gap-10 lgl:gap-20 font-bodyFont"
     >
-      <div>
-        <div className="py-6 lgl:py-12 font-titleFont flex flex-col gap-4">
-          <p className="text-sm text-designColor tracking-[4px]">2018 - Present</p>
-          <h2 className="text-3xl md:text-4xl font-bold">Job Experience</h2>
+      <div className="w-full lgl:w-1/2">
+        <div className="py-6 lgl:py-12 flex flex-col gap-2">
+          <p className="text-xs font-semibold text-designColor uppercase tracking-widest font-bodyFont">2018 - Present</p>
+          <h2 className="text-2xl md:text-3xl font-normal font-titleFont italic text-white">Job Experience</h2>
         </div>
-        <div className="mt-6 lgl:mt-14 w-full h-[1000px] border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
+        <div className="mt-6 lgl:mt-8 w-full border-l border-white/10 flex flex-col gap-8">
           <ResumeCard
             title="Founder & Team Lead"
             subTitle="Get Out Of Depression (GOOD) Foundation - (2019 - Present)"
@@ -35,12 +35,12 @@ const Experience = () => {
           />
         </div>
       </div>
-      <div>
-        <div className="py-6 lgl:py-12 font-titleFont flex flex-col gap-4">
-          <p className="text-sm text-designColor tracking-[4px]">2020 - Present</p>
-          <h2 className="text-3xl md:text-4xl font-bold">Trainer Experience</h2>
+      <div className="w-full lgl:w-1/2">
+        <div className="py-6 lgl:py-12 flex flex-col gap-2">
+          <p className="text-xs font-semibold text-designColor uppercase tracking-widest font-bodyFont">2020 - Present</p>
+          <h2 className="text-2xl md:text-3xl font-normal font-titleFont italic text-white">Trainer Experience</h2>
         </div>
-        <div className="mt-6 lgl:mt-14 w-full h-[1000px] border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
+        <div className="mt-6 lgl:mt-8 w-full border-l border-white/10 flex flex-col gap-8">
           <ResumeCard
             title="Trainer & Mentor"
             subTitle="Ghana Service Learning, University of South Florida - (2022 - Present)"
