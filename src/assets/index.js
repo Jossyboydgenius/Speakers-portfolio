@@ -9,9 +9,9 @@ import projectSix from "./images/projects/projectSix.jpg";
 import projectSeven from "./images/projects/projectSeven.jpg";
 import projectEight from "./images/projects/projectEight.jpg";
 import projectNine from "./images/projects/projectNine.jpg";
-import testimonialOne from "./images/testmonial/testimonialOne.png";
-import testimonialTwo from "./images/testmonial/testimonialTwo.png";
-import quote from "./images/testmonial/quote.png";
+import testimonialOne from "./images/testimonial/testimonialOne.png";
+import testimonialTwo from "./images/testimonial/testimonialTwo.png";
+import quote from "./images/testimonial/quote.png";
 import contactImg from "./images/contact/contactImg.png";
 
 export {
