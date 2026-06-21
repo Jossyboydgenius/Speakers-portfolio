@@ -2,9 +2,9 @@ import React from 'react'
 
 const FooterBottom = () => {
   return (
-    <div className="w-full py-10">
-      <p className="text-center text-gray-500 text-base">
-        © 2024. All rights reserved by Awe Joseph.
+    <div className="w-full py-8 border-t border-white/5 font-bodyFont">
+      <p className="text-center text-gray-500 text-sm font-light">
+        © {new Date().getFullYear()}. All rights reserved by Helena Amoah.
       </p>
     </div>
   );
