@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Title from '../layouts/Title';
 import ContactLeft from './ContactLeft';
 import { motion } from "framer-motion";
 import confetti from 'canvas-confetti';
 import { FiCheckCircle } from 'react-icons/fi';
 
-const Contact = () => {
+const Contact = ({ selectedSubject, setSelectedSubject }) => {
   const [username, setUsername] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [email, setEmail] = useState("");
@@ -20,6 +20,13 @@ const Contact = () => {
     subject: "",
     message: ""
   });
+
+  // Sync selectedSubject from features booking
+  useEffect(() => {
+    if (selectedSubject) {
+      setSubject(selectedSubject);
+    }
+  }, [selectedSubject]);
 
   const fireConfetti = () => {
     const colors = ['#be8c6c', '#d4b08c', '#ffffff', '#e2e8f0'];
@@ -70,15 +77,28 @@ const Contact = () => {
   };
 
   const phoneValidation = (num) => {
-    const cleaned = num.replace(/[\s\-()]/g, "");
-    return /^\+?[0-9]{7,15}$/.test(cleaned);
+    return /^\+?[0-9]{7,15}$/.test(num);
   };
 
   const handleInputChange = (field, value) => {
     if (field === 'username') setUsername(value);
-    if (field === 'phoneNumber') setPhoneNumber(value);
+    if (field === 'phoneNumber') {
+      // Real-time phone sanitization: only allow optional leading '+' and digits
+      let sanitized = value;
+      if (value.startsWith('+')) {
+        sanitized = '+' + value.slice(1).replace(/[^0-9]/g, "");
+      } else {
+        sanitized = value.replace(/[^0-9]/g, "");
+      }
+      setPhoneNumber(sanitized);
+    }
     if (field === 'email') setEmail(value);
-    if (field === 'subject') setSubject(value);
+    if (field === 'subject') {
+      setSubject(value);
+      if (setSelectedSubject) {
+        setSelectedSubject(""); // clear parent trigger
+      }
+    }
     if (field === 'message') setMessage(value);
 
     setErrors((prev) => ({ ...prev, [field]: "" }));
@@ -145,6 +165,9 @@ const Contact = () => {
     setEmail("");
     setSubject("");
     setMessage("");
+    if (setSelectedSubject) {
+      setSelectedSubject("");
+    }
     setErrors({
       username: "",
       phoneNumber: "",
@@ -274,49 +297,49 @@ const Contact = () => {
                         : "border-white/10"
                     } contactInput`}
                     type="text"
-                    />
-                    {errors.subject && (
-                      <p className="text-rose-400 text-xs mt-1 font-medium pl-1">
-                        {errors.subject}
-                      </p>
-                    )}
-                  </div>
-                  <div className="flex flex-col gap-2">
-                    <p className="text-xs text-gray-400 uppercase tracking-wider font-semibold">
-                      Message
+                  />
+                  {errors.subject && (
+                    <p className="text-rose-400 text-xs mt-1 font-medium pl-1">
+                      {errors.subject}
                     </p>
-                    <textarea
-                      onChange={(e) => handleInputChange('message', e.target.value)}
-                      value={message}
-                      className={`${
-                        errors.message
-                          ? "border-red-500/50 focus:border-red-500 focus:ring-red-500/20"
-                          : "border-white/10"
-                      } contactTextArea`}
-                      cols="30"
-                      rows="6"
-                    ></textarea>
-                    {errors.message && (
-                      <p className="text-rose-400 text-xs mt-1 font-medium pl-1">
-                        {errors.message}
-                      </p>
-                    )}
-                  </div>
-                  <div className="w-full mt-2">
-                    <button
-                      onClick={handleSend}
-                      className="w-full h-12 rounded-lg border border-designColor/30 hover:border-designColor text-xs font-semibold uppercase tracking-wider text-designColor hover:bg-designColor hover:text-[#090A0C] transition-all duration-300"
-                    >
-                      Send Message
-                    </button>
-                  </div>
-                </form>
-              )}
-            </motion.div>
-          </div>
+                  )}
+                </div>
+                <div className="flex flex-col gap-2">
+                  <p className="text-xs text-gray-400 uppercase tracking-wider font-semibold">
+                    Message
+                  </p>
+                  <textarea
+                    onChange={(e) => handleInputChange('message', e.target.value)}
+                    value={message}
+                    className={`${
+                      errors.message
+                        ? "border-red-500/50 focus:border-red-500 focus:ring-red-500/20"
+                        : "border-white/10"
+                    } contactTextArea`}
+                    cols="30"
+                    rows="6"
+                  ></textarea>
+                  {errors.message && (
+                    <p className="text-rose-400 text-xs mt-1 font-medium pl-1">
+                      {errors.message}
+                    </p>
+                  )}
+                </div>
+                <div className="w-full mt-2">
+                  <button
+                    onClick={handleSend}
+                    className="w-full h-12 rounded-lg border border-designColor/30 hover:border-designColor text-xs font-semibold uppercase tracking-wider text-designColor hover:bg-designColor hover:text-[#090A0C] transition-all duration-300"
+                  >
+                    Send Message
+                  </button>
+                </div>
+              </form>
+            )}
+          </motion.div>
         </div>
-      </section>
-    );
-  }
-  
-  export default Contact
+      </div>
+    </section>
+  );
+}
+
+export default Contact
