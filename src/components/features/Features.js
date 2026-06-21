@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaMicrophone, FaPodcast, FaComments, FaBullhorn, FaPenNib, FaUsers, FaLaptop, FaChartLine, FaCalendarAlt, FaNewspaper } from "react-icons/fa";
+import { FaMicrophone, FaPodcast, FaBullhorn, FaPenNib, FaUsers, FaLaptop, FaChartLine, FaCalendarAlt, FaNewspaper } from "react-icons/fa";
 import Title from '../layouts/Title';
 import Card from './Card';
 
@@ -7,10 +7,10 @@ const Features = () => {
   return (
     <section
       id="features"
-      className="w-full py-20 border-b-[1px] border-b-black"
+      className="w-full py-20 border-b border-white/5 font-bodyFont"
     >
       <Title title="Features" des="What I Do" />
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-20">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-8">
         <Card
           title="Master of Ceremonies (MC) & Moderation"
           des="Providing professional and engaging hosting services for your events, ensuring a smooth and
