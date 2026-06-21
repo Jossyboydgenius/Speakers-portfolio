@@ -1,24 +1,24 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer components{
     .bannerIcon{
-        @apply w-16 h-16 bg-black bg-opacity-25 text-gray-200 text-xl inline-flex items-center justify-center rounded-md shadow-shadowOne hover:bg-opacity-40 hover:-translate-y-1 transition-all hover:text-designColor cursor-pointer duration-300;
+        @apply w-12 h-12 border border-white/10 hover:border-designColor/50 bg-white/[0.02] text-gray-400 hover:text-designColor inline-flex items-center justify-center rounded-full transition-all duration-300 cursor-pointer hover:-translate-y-1;
     }
     .resumeLi {
-    @apply w-full h-20 bg-black bg-opacity-25 text-xl text-gray-300 flex justify-center cursor-pointer hover:bg-opacity-40 duration-300 items-center border-[1px] rounded-none;
-         }
-.bgOpacity {
-@apply bg-black bg-opacity-40;
-                  }
-    .contactInput{
-        @apply w-full h-12 rounded-lg border-b-[1px] border-b-gray-600 bg-[#191b1e] text-lightText px-4 active:outline-none focus-visible:outline-designColor outline-none focus-visible:border-b-transparent duration-300
+        @apply w-full h-16 border border-white/5 bg-white/[0.01] hover:bg-white/[0.03] text-lg text-gray-400 hover:text-white flex justify-center cursor-pointer duration-300 items-center rounded-lg;
     }
-.contactTextArea{
-    @apply w-full rounded-lg border-b-[1px] border-b-gray-600 bg-[#191b1e] text-lightText px-4 py-2 active:outline-none focus-visible:outline-designColor outline-none focus-visible:border-b-transparent duration-300 resize-none
-}
+    .bgOpacity {
+        @apply bg-white bg-opacity-[0.03];
+    }
+    .contactInput{
+        @apply w-full h-12 rounded-lg border border-white/10 bg-white/[0.02] text-lightText px-4 focus:border-designColor/50 focus:outline-none duration-300;
+    }
+    .contactTextArea{
+        @apply w-full rounded-lg border border-white/10 bg-white/[0.02] text-lightText px-4 py-3 focus:border-designColor/50 focus:outline-none duration-300 resize-none;
+    }
 }
 
 .active {
@@ -26,4 +26,19 @@
 }
 .scrollbar-hide::-webkit-scrollbar{
     display: none;
+}
+
+/* Custom Branded Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #090A0C;
+}
+::-webkit-scrollbar-thumb {
+  background: #be8c6c;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d4b08c;
 }
