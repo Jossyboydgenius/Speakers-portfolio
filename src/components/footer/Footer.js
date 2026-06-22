@@ -3,7 +3,7 @@ import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from "react-icons/f
 import { logo } from "../../assets/index";
 import { Link } from 'react-scroll';
 
-const Footer = () => {
+const Footer = ({ setActiveResource }) => {
   return (
     <div className="w-full py-20 h-auto border-b border-white/5 grid grid-cols-1 md:grid-cols-2 lgl:grid-cols-3 gap-8 font-bodyFont">
       <div className="w-full h-full flex flex-col gap-6">
@@ -78,16 +78,28 @@ const Footer = () => {
           Resources
         </h3>
         <ul className="flex flex-col gap-3 py-6 overflow-hidden font-light text-sm text-gray-400">
-          <li className="w-full hover:text-white transition-colors duration-300 group cursor-pointer">
+          <li 
+            onClick={() => setActiveResource && setActiveResource('terms')}
+            className="w-full hover:text-white transition-colors duration-300 group cursor-pointer"
+          >
             Terms of Service
           </li>
-          <li className="w-full hover:text-white transition-colors duration-300 group cursor-pointer">
+          <li 
+            onClick={() => setActiveResource && setActiveResource('privacy')}
+            className="w-full hover:text-white transition-colors duration-300 group cursor-pointer"
+          >
             Privacy Policy
           </li>
-          <li className="w-full hover:text-white transition-colors duration-300 group cursor-pointer">
+          <li 
+            onClick={() => setActiveResource && setActiveResource('support')}
+            className="w-full hover:text-white transition-colors duration-300 group cursor-pointer"
+          >
             Support
           </li>
-          <li className="w-full hover:text-white transition-colors duration-300 group cursor-pointer">
+          <li 
+            onClick={() => setActiveResource && setActiveResource('faqs')}
+            className="w-full hover:text-white transition-colors duration-300 group cursor-pointer"
+          >
             FAQs
           </li>
         </ul>
