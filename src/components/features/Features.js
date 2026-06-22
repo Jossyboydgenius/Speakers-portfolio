@@ -1,9 +1,27 @@
-import React from 'react'
-import { FaMicrophone, FaPodcast, FaBullhorn, FaPenNib, FaUsers, FaLaptop, FaChartLine, FaCalendarAlt, FaNewspaper } from "react-icons/fa";
+import React, { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { scroller } from 'react-scroll'
+import { MdClose } from 'react-icons/md'
+import { FaCheckCircle } from 'react-icons/fa'
 import Title from '../layouts/Title';
 import Card from './Card';
+import { featuresData } from '../../data/featuresData';
 
-const Features = () => {
+const Features = ({ setSelectedSubject }) => {
+  const [activeService, setActiveService] = useState(null);
+
+  // Prevent body scrolling when active service detail page is open
+  useEffect(() => {
+    if (activeService) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [activeService]);
+
   return (
     <section
       id="features"
@@ -11,65 +29,129 @@ const Features = () => {
     >
       <Title title="Features" des="What I Do" />
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-8">
-        <Card
-          title="Master of Ceremonies (MC) & Moderation"
-          des="Providing professional and engaging hosting services for your events, ensuring a smooth and
-          memorable experience for all attendees. Facilitating discussions that bring out the best in panellists,
-          ensuring a balanced and productive dialogue that keeps the audience engaged."
-          icon={<FaMicrophone />}
-        />
-        <Card
-          title="Podcast Hosting"
-          des="Hosting thoughtful and engaging podcasts on relevant social issues, 
-          bringing insightful conversations and diverse perspectives to the forefront."
-          icon={<FaPodcast />}
-        />
-        <Card
-          title="Voice Overs"
-          des="Providing professional voice-over services for advertisements, documentaries, 
-          and various multimedia projects, delivering clear and impactful narration."
-          icon={<FaBullhorn />}
-        />
-        <Card
-          title="Faceless Poetry"
-          des="Inspiring change through powerful spoken word performances, 
-          using poetry to address social issues and evoke emotional responses from the audience."
-          icon={<FaPenNib />}
-        />
-        <Card
-          title="Public Speaking"
-          des="Delivering powerful and inspiring speeches for any audience, 
-          motivating and empowering listeners with compelling storytelling and impactful messages."
-          icon={<FaUsers />}
-        />
-        <Card
-          title="Freelance Writing"
-          des="I deliver high-quality, compelling content tailored to your unique needs. Whether it’s articles, blogs,
-          reports, or creative pieces, I bring clarity, originality, and professionalism to every project. My
-          writing is driven by research, audience understanding, and a passion for storytelling, ensuring your
-          message stands out and makes an impact."
-          icon={<FaLaptop />}
-        />
-        <Card
-          title="Digital Marketing"
-          des="Crafting and executing data-driven digital marketing strategies that amplify visibility and drive
-          engagement. From social media management and content creation Digital Marketing. My digital
-          campaign skills resonate with your audience and align with your objectives."
-          icon={<FaChartLine />}
-        />
-        <Card
-          title="Event Planning"
-          des="Organizing and coordinating events to ensure they run smoothly and successfully. 
-          From concept to execution, I handle all aspects of event planning to create memorable experiences."
-          icon={<FaCalendarAlt />}
-        />
-        <Card
-          title="Media Relations"
-          des="Building and maintaining relationships with media outlets to ensure positive coverage and effective communication of your message. 
-          I manage press releases, media inquiries, and public relations strategies."
-          icon={<FaNewspaper />}
-        />
+        {featuresData.map((item) => (
+          <Card
+            key={item.id}
+            title={item.title}
+            des={item.des}
+            icon={item.icon}
+            onClick={() => setActiveService(item)}
+          />
+        ))}
       </div>
+
+      {/* Service Detail Page Overlay */}
+      <AnimatePresence>
+        {activeService && (
+          <>
+            {/* Dark overlay backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setActiveService(null)}
+              className="fixed inset-0 bg-black/80 backdrop-blur-md z-[1000] cursor-pointer"
+            />
+            {/* Main detail container */}
+            <motion.div
+              initial={{ y: "100%", opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: "100%", opacity: 0 }}
+              transition={{ type: "spring", stiffness: 100, damping: 20 }}
+              className="fixed top-4 bottom-4 left-4 right-4 md:top-10 md:bottom-10 md:left-1/2 md:-translate-x-1/2 md:max-w-4xl bg-[#090A0C] border border-white/10 rounded-2xl z-[1001] shadow-2xl p-6 md:p-10 flex flex-col justify-between overflow-y-auto cursor-default font-bodyFont"
+            >
+              {/* Header block */}
+              <div className="flex flex-col gap-6">
+                <div className="flex justify-between items-start">
+                  <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-designColor/10 text-designColor text-4xl">
+                    {activeService.icon}
+                  </div>
+                  <button
+                    onClick={() => setActiveService(null)}
+                    className="w-10 h-10 border border-white/10 hover:border-designColor/50 bg-white/[0.02] text-gray-400 hover:text-designColor flex justify-center items-center rounded-full text-2xl transition-all duration-300"
+                  >
+                    <MdClose />
+                  </button>
+                </div>
+                <div>
+                  <h2 className="text-2xl md:text-3xl font-semibold font-titleFont text-white italic">
+                    {activeService.title}
+                  </h2>
+                  <div className="w-20 h-[3px] bg-designColor mt-3 rounded-full" />
+                </div>
+              </div>
+
+              {/* Details Content Body */}
+              <div className="flex flex-col lgl:flex-row gap-8 my-8 overflow-y-auto pr-2">
+                {/* Left: Detailed Overview */}
+                <div className="w-full lgl:w-1/2 flex flex-col gap-4">
+                  <h3 className="text-lg font-semibold text-white font-titleFont">Service Overview</h3>
+                  <p className="text-gray-300 font-light text-sm md:text-base leading-relaxed font-bodyFont">
+                    {activeService.details}
+                  </p>
+                </div>
+
+                {/* Right: Bullet Focus & Deliverables */}
+                <div className="w-full lgl:w-1/2 flex flex-col gap-6">
+                  {/* Focus Areas */}
+                  <div className="flex flex-col gap-3">
+                    <h3 className="text-sm uppercase tracking-wider font-semibold text-designColor font-bodyFont">
+                      Focus Areas
+                    </h3>
+                    <ul className="flex flex-col gap-2">
+                      {activeService.focusAreas.map((area, idx) => (
+                        <li key={idx} className="flex items-start gap-3 text-sm text-gray-300 font-light">
+                          <FaCheckCircle className="text-designColor/60 flex-shrink-0 text-xs mt-1" />
+                          <span>{area}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Key Deliverables */}
+                  <div className="flex flex-col gap-3">
+                    <h3 className="text-sm uppercase tracking-wider font-semibold text-designColor font-bodyFont">
+                      Key Deliverables
+                    </h3>
+                    <ul className="flex flex-col gap-2">
+                      {activeService.deliverables.map((item, idx) => (
+                        <li key={idx} className="flex items-start gap-3 text-sm text-gray-300 font-light">
+                          <FaCheckCircle className="text-designColor/60 flex-shrink-0 text-xs mt-1" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Footer CTA block */}
+              <div className="border-t border-white/5 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+                <p className="text-xs text-gray-400 font-light font-bodyFont">
+                  Interested in collaborating for your next project or event? Let's talk.
+                </p>
+                <button
+                  onClick={() => {
+                    if (setSelectedSubject) {
+                      setSelectedSubject(`Inquiry: ${activeService.title}`);
+                    }
+                    setActiveService(null);
+                    scroller.scrollTo("contact", {
+                      duration: 500,
+                      delay: 0,
+                      smooth: "easeInOutQuark",
+                      offset: -70
+                    });
+                  }}
+                  className="w-full md:w-auto px-6 py-3 rounded-lg border border-designColor hover:bg-designColor hover:text-[#090A0C] text-xs font-semibold uppercase tracking-wider text-designColor transition-all duration-300 font-bodyFont"
+                >
+                  Book This Service
+                </button>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
