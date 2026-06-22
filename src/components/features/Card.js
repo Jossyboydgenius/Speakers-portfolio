@@ -2,7 +2,7 @@ import React from 'react'
 import { HiArrowRight } from "react-icons/hi";
 import { motion } from "framer-motion";
 
-const Card = ({title, des, icon}) => {
+const Card = ({title, des, icon, onClick}) => {
   return (
     <motion.div 
       initial={{ opacity: 0, y: 30 }}
@@ -10,7 +10,8 @@ const Card = ({title, des, icon}) => {
       viewport={{ once: false, amount: 0.15 }}
       transition={{ duration: 0.5 }}
       whileHover={{ y: -8 }}
-      className="w-full px-8 py-10 rounded-2xl border border-white/5 bg-white/[0.01] hover:bg-white/[0.03] hover:border-designColor/35 transition-all duration-300 flex flex-col justify-between group shadow-lg hover:shadow-designColor/5"
+      onClick={onClick}
+      className="w-full px-8 py-10 rounded-2xl border border-white/5 bg-white/[0.01] hover:bg-white/[0.03] hover:border-designColor/35 transition-all duration-300 flex flex-col justify-between group shadow-lg hover:shadow-designColor/5 cursor-pointer"
     >
       <div className="flex flex-col gap-6">
         <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-designColor/10 text-designColor text-3xl group-hover:bg-designColor group-hover:text-[#090A0C] transition-all duration-300">
