@@ -14,17 +14,17 @@ module.exports = {
         xl: "1280px",
       },
       fontFamily: {
-        bodyFont: ["Poppins", "sans-serif"],
-        titleFont: ["Montserrat", "sans-serif"],
+        bodyFont: ["Outfit", "sans-serif"],
+        titleFont: ["Georgia", "serif"],
       },
       colors: {
-        bodyColor: "#212428",
-        lightText: "#c4cfde",
-        boxBg: "linear-gradient(145deg, #1e2024, #23272b)",
+        bodyColor: "#090A0C",
+        lightText: "#e2e8f0",
+        boxBg: "linear-gradient(145deg, #111317, #17191e)",
         designColor: "#be8c6c",
       },
       boxShadow: {
-        shadowOne: "10px 10px 19px #1c1e22, -10px -10px 19px #262a2e",
+        shadowOne: "0 10px 30px -10px rgba(0, 0, 0, 0.7)",
       },
     },
   },
