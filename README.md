@@ -1,6 +1,6 @@
-# Helena Amoah - Professional Speakers Portfolio
+# Nana Aba - Professional Speakers Portfolio
 
-A high-end, premium portfolio website designed for **Helena Amoah**, a Communications Specialist, SDG Ambassador, and Youth Advocate. Built in 2026, the website represents state-of-the-art web design aesthetics, incorporating elegant typography, glassmorphism panel styles, and smooth scroll animations.
+A high-end, premium portfolio website designed for **Nana Aba**, a Communications Specialist, SDG Ambassador, and Youth Advocate. Built in 2026, the website represents state-of-the-art web design aesthetics, incorporating elegant typography, glassmorphism panel styles, and smooth scroll animations.
 
 ---
 

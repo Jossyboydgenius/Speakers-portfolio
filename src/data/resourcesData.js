@@ -9,7 +9,7 @@ export const resourcesData = {
       },
       {
         heading: "2. Intellectual Property Rights",
-        content: "All original content, audio recordings, spoken word poetry, script concepts, copy drafts, and materials created by Helena Amoah remain her intellectual property unless explicitly transferred under a written contract. You may not reproduce, distribute, or modify these materials without prior written consent."
+        content: "All original content, audio recordings, spoken word poetry, script concepts, copy drafts, and materials created by Nana Aba remain her intellectual property unless explicitly transferred under a written contract. You may not reproduce, distribute, or modify these materials without prior written consent."
       },
       {
         heading: "3. Service Bookings & Cancellations",
@@ -17,7 +17,7 @@ export const resourcesData = {
       },
       {
         heading: "4. Limitation of Liability",
-        content: "Helena Amoah and her team strive for professional excellence. However, we are not liable for direct, indirect, incidental, or consequential damages resulting from the use of this website, information provided, or any project outcomes."
+        content: "Nana Aba and her team strive for professional excellence. However, we are not liable for direct, indirect, incidental, or consequential damages resulting from the use of this website, information provided, or any project outcomes."
       }
     ]
   },
@@ -53,7 +53,7 @@ export const resourcesData = {
       },
       {
         heading: "Direct Communication Channels",
-        content: "Email: support@helenaamoah.com\nPhone: +233(0)543579809\nHours: Monday to Friday, 9:00 AM - 5:00 PM GMT"
+        content: "Email: helenaamoah6@gmail.com\nPhone: +233(0)543579809\nHours: Monday to Friday, 9:00 AM - 5:00 PM GMT"
       },
       {
         heading: "Pre-Booking Help",
@@ -66,7 +66,7 @@ export const resourcesData = {
     lastUpdated: "June 2026",
     sections: [
       {
-        heading: "How early should I book Helena for an event?",
+        heading: "How early should I book Nana Aba for an event?",
         content: "It is recommended to book at least 4 to 8 weeks in advance for local events in Ghana, and 8 to 12 weeks in advance for international speaking or moderation bookings to ensure availability and proper script preparation."
       },
       {

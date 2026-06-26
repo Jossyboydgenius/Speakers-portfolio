@@ -1,18 +1,22 @@
 import React from 'react'
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from "react-icons/fa";
-import { logo } from "../../assets/index";
 import { Link } from 'react-scroll';
 
 const Footer = ({ setActiveResource }) => {
   return (
     <div className="w-full py-20 h-auto border-b border-white/5 grid grid-cols-1 md:grid-cols-2 lgl:grid-cols-3 gap-8 font-bodyFont">
       <div className="w-full h-full flex flex-col gap-6">
-        <img className="w-32" src={logo} alt="logo" />
+        <div className="flex items-center gap-3 cursor-pointer">
+          <img className="h-10 w-10 rounded-full object-cover border border-designColor/40" src="/profilePhoto.png" alt="logo" />
+          <span className="text-white tracking-wider text-sm md:text-base italic font-titleFont font-medium">
+            Nana Aba
+          </span>
+        </div>
         <p className="text-sm font-light text-gray-400 leading-relaxed">
           Connecting people through impactful communication and advocacy.
         </p>
         <div className="flex gap-3">
-          <a href="https://www.linkedin.com/in/helena-amoah" target="_blank" rel="noopener noreferrer">
+          <a href="http://surl.li/sodnm" target="_blank" rel="noopener noreferrer">
             <span className="bannerIcon">
               <FaLinkedinIn />
             </span>

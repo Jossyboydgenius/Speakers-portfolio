@@ -3,6 +3,13 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    background-color: #090A0C;
+}
+
+
 @layer components{
     .bannerIcon{
         @apply w-12 h-12 border border-white/10 hover:border-designColor/50 bg-white/[0.02] text-gray-400 hover:text-designColor inline-flex items-center justify-center rounded-full transition-all duration-300 cursor-pointer hover:-translate-y-1;

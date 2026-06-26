@@ -108,7 +108,7 @@ const Testimonial = () => {
                     </div>
                   </div>
                   <p className="text-base font-titleFont text-gray-300 font-light italic leading-relaxed">
-                    "Helena is an exceptional communications professional with a unique ability to craft compelling narratives that resonate with diverse audiences. Her creativity, strategic thinking, 
+                    "Nana Aba is an exceptional communications professional with a unique ability to craft compelling narratives that resonate with diverse audiences. Her creativity, strategic thinking, 
                     and attention to detail consistently elevated our communications campaigns, while her collaborative spirit made her a pleasure to work with. 
                     I highly recommend her for any role requiring expertise in communications, media and engagement."
                   </p>
@@ -155,7 +155,7 @@ const Testimonial = () => {
                     </div>
                   </div>
                   <p className="text-base font-titleFont text-gray-300 font-light italic leading-relaxed">
-                    "Working with Helena Amoah at Get Out of depression foundation as the team lead has been an impactful moment. 
+                    "Working with Nana Aba at Get Out of depression foundation as the team lead has been an impactful moment. 
                     She is selfless adaptable and a team player. She also has a holistic I can do spirit that inspires others to do more and achieve the purpose. 
                     She is always on course to bring new and innovative ideas on board and carry out task effectively. 
                     Her proactive approach and skills in carrying out project led her of being the face of GOOD foundation."

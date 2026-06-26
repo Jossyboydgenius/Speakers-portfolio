@@ -37,27 +37,51 @@ const Achievement = () => {
       </div>
       <div className="w-full lgl:w-1/2">
         <div className="py-6 lgl:py-12 flex flex-col gap-2">
-          <p className="text-xs font-semibold text-designColor uppercase tracking-widest font-bodyFont">Professional Recognition</p>
-          <h2 className="text-2xl md:text-3xl font-normal font-titleFont italic text-white">Additional Recognitions</h2>
+          <p className="text-xs font-semibold text-designColor uppercase tracking-widest font-bodyFont">Workshops & Training</p>
+          <h2 className="text-2xl md:text-3xl font-normal font-titleFont italic text-white">Professional Development</h2>
         </div>
         <div className="mt-6 lgl:mt-8 w-full border-l border-white/10 flex flex-col gap-8">
           <ResumeCard
-            title="First Runner Up"
-            subTitle="Confident Public Speakers Competition (2012)"
-            result="Runner-Up"
-            des="Achieved runner-up status in a public speaking competition, demonstrating strong communication and presentation skills."
+            title="Voices for Change (V4C) Human Rights Reporting"
+            subTitle="CJID & Institute for War and Peace Reporting - (2024)"
+            result="Certified"
+            des="Specialized reporting training focused on human rights advocacy, public policy, and ethical journalism."
           />
           <ResumeCard
-            title="Publications on Environmental and Gender Issues"
-            subTitle="Various Platforms (2024)"
-            result="Published"
-            des="Authored articles like 'A Free Press for Environmental Justice' and 'Investing in Women,' featured on platforms like Curious Minds Ghana."
+            title="Intercontinental Socio-Economic Rights Workshop"
+            subTitle="African Commission on Human & Peoples' Rights (ACHPR) - (2025)"
+            result="Participant"
+            des="Promoting the socio-economic rights of women, with a focus on natural resource management and extractive industries."
           />
           <ResumeCard
-            title="Advocacy and Mental Health Speaker"
-            subTitle="Curious Minds Annual General Meeting (2023)"
-            result="Speaker"
-            des="Presented on advocacy and mental health at a national conference, raising awareness for mental health issues among youth."
+            title="Countering Mis/disinformation & Propaganda"
+            subTitle="Media Foundation for West Africa - (2024)"
+            result="Specialist"
+            des="Training focused on countering election-year misinformation and propaganda narratives in Ghana's democratic processes."
+          />
+          <ResumeCard
+            title="AI For Her Future Hackathon"
+            subTitle="UNFPA & African Health Innovation Centre - (2025)"
+            result="Finalist"
+            des="Created tech-driven and AI solutions addressing healthcare access and empowerment for women."
+          />
+          <ResumeCard
+            title="5th African Youth Conference on Social Justice"
+            subTitle="Young African Activist Network & FES (Addis Ababa) - (2022)"
+            result="Delegate"
+            des="Collaborated on democratic and social justice frameworks with youth activists across the African continent."
+          />
+          <ResumeCard
+            title="MasterCard Foundation Baobab Summit"
+            subTitle="MasterCard Foundation (Kigali, Rwanda) - (2022)"
+            result="Attendee"
+            des="Participated in leadership summits, peer networking, and panel discussions on youth leadership in Africa."
+          />
+          <ResumeCard
+            title="Youth Leadership Training"
+            subTitle="LeadAfrique International (Ghana Youth Leadership Academy) - (2023)"
+            result="Graduate"
+            des="Intensive training program focused on personal leadership, public speaking, and project governance."
           />
         </div>
       </div>

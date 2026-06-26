@@ -18,7 +18,7 @@ const ResumeCard = ({title, subTitle, result, des}) => {
       </div>
       
       {/* Card Content */}
-      <div className="w-full bg-white/[0.01] hover:bg-white/[0.03] border border-white/5 hover:border-designColor/30 rounded-2xl p-6 md:p-8 flex flex-col gap-4 shadow-lg hover:shadow-designColor/5 transition-all duration-300">
+      <div className="flex-grow min-w-0 bg-white/[0.01] hover:bg-white/[0.03] border border-white/5 hover:border-designColor/30 rounded-2xl p-6 md:p-8 flex flex-col gap-4 shadow-lg hover:shadow-designColor/5 transition-all duration-300">
         <div className="flex flex-col md:flex-row justify-between gap-4 md:items-center">
           <div>
             <h3 className="text-lg md:text-xl font-normal font-titleFont text-white italic group-hover:text-designColor transition-colors duration-300">

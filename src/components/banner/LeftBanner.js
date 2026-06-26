@@ -20,10 +20,10 @@ const LeftBanner = () => {
     <div className="w-full lgl:w-1/2 flex flex-col gap-12 font-bodyFont">
       <div className="flex flex-col gap-6">
         <h4 className="text-xs tracking-[3px] uppercase font-semibold text-designColor/85">
-          WELCOME TO MY WORLD
+          COMMUNICATIONS SPECIALIST & ADVOCATE
         </h4>
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-normal text-white leading-tight font-titleFont">
-          Hi, I'm <span className="text-designColor italic font-medium">Helena</span>
+          Hi, I'm <span className="text-designColor italic font-medium">Nana Aba</span>
         </h1>
         <h2 className="text-2xl md:text-3xl font-normal text-gray-300 font-titleFont italic h-16 md:h-12">
           <span>{text}</span>
@@ -44,7 +44,7 @@ const LeftBanner = () => {
           Find me in
         </h2>
         <div className="flex gap-3">
-          <a href="https://www.linkedin.com/in/helena-amoah" target="_blank" rel="noopener noreferrer">
+          <a href="http://surl.li/sodnm" target="_blank" rel="noopener noreferrer">
             <span className="bannerIcon">
               <FaLinkedinIn />
             </span>

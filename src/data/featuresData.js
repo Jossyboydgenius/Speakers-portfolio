@@ -8,7 +8,8 @@ import {
   FaLaptop, 
   FaChartLine, 
   FaCalendarAlt, 
-  FaNewspaper 
+  FaNewspaper,
+  FaHashtag
 } from "react-icons/fa";
 
 export const featuresData = [
@@ -188,6 +189,48 @@ export const featuresData = [
       "Written press releases & distributions",
       "Interview prep sheets & talking points",
       "Coverage clipping & report reports"
+    ]
+  },
+  {
+    id: 10,
+    title: "Social Media Management & Content Creation",
+    des: "Curating premium digital footprints and content strategies. Driving brand growth, audience engagement, and high-impact visual storytelling across major socials.",
+    icon: <FaHashtag />,
+    details: "In today's digital landscape, a compelling social media presence is essential for building communities and scaling brands. I offer comprehensive social media management and content creation services, tailoring creative assets, copywriting, and distribution schedules to connect deeply with target audiences. From design curation to direct community interactions, I ensure your social channels tell a unified and impactful brand story.",
+    focusAreas: [
+      "Content Strategy & Curation",
+      "Managed Brand Growth & Audits",
+      "Visual & Short-Form Video Assets",
+      "Copywriting & Narrative Development",
+      "Community Engagement & Moderation"
+    ],
+    deliverables: [
+      "Custom weekly/monthly content calendars",
+      "High-converting visual/written posts",
+      "Engagement strategies & follower growth reports",
+      "Brand voice alignment & style guides"
+    ],
+    workSamples: [
+      {
+        client: "Dr. (Med) Chiaky Otuteye",
+        links: [
+          { platform: "Instagram", url: "https://www.instagram.com/thechiaky?igsh=cGZxeG9hdzczMzFr&utm_source=qr" },
+          { platform: "TikTok", url: "https://www.tiktok.com/@thechiaky?_r=1&_t=ZS-97E3wxwnFGq" },
+          { platform: "Spotify Podcast", url: "https://open.spotify.com/show/6T4et2t76X0gJAEldYhepO?si=RxyoU6xbTYibqjb4qfYBXg" }
+        ]
+      },
+      {
+        client: "GOOD Foundation",
+        links: [
+          { platform: "Instagram", url: "https://www.instagram.com/_goodfoundation?igsh=dGJ5bjB6M2hhaXBz&utm_source=qr" }
+        ]
+      },
+      {
+        client: "Praxis Consulting",
+        links: [
+          { platform: "Instagram", url: "https://www.instagram.com/praxisconsultinggh?igsh=MnJ2c2p3MWJhZGdj&utm_source=qr" }
+        ]
+      }
     ]
   }
 ];

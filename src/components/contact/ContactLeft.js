@@ -15,10 +15,10 @@ const ContactLeft = () => {
       <img
         className="w-full h-52 object-cover rounded-xl border border-white/5"
         src={contactImg}
-        alt="Helena Amoah"
+        alt="Nana Aba"
       />
       <div className="flex flex-col gap-3">
-        <h3 className="text-2xl font-normal font-titleFont text-white italic">Helena Amoah</h3>
+        <h3 className="text-2xl font-normal font-titleFont text-white italic">Nana Aba</h3>
         <p className="text-sm font-semibold text-designColor/90">
           Communications & Development Specialist
         </p>
@@ -30,7 +30,7 @@ const ContactLeft = () => {
             Phone: <span className="text-white font-medium">+233(0)543579809</span>
           </p>
           <p className="flex items-center gap-2">
-            Email: <span className="text-white font-medium break-all">nanaabaappiatewaa@gmail.com</span>
+            Email: <span className="text-white font-medium break-all">helenaamoah6@gmail.com</span>
           </p>
         </div>
       </div>

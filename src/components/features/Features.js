@@ -2,7 +2,15 @@ import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { scroller } from 'react-scroll'
 import { MdClose } from 'react-icons/md'
-import { FaCheckCircle } from 'react-icons/fa'
+import { FaCheckCircle, FaInstagram, FaTiktok, FaSpotify, FaGlobe } from 'react-icons/fa'
+
+const getPlatformIcon = (platform) => {
+  const p = platform.toLowerCase();
+  if (p.includes("instagram")) return <FaInstagram className="text-xs text-designColor group-hover:text-[#090A0C] transition-colors" />;
+  if (p.includes("tiktok")) return <FaTiktok className="text-xs text-designColor group-hover:text-[#090A0C] transition-colors" />;
+  if (p.includes("spotify") || p.includes("podcast")) return <FaSpotify className="text-xs text-designColor group-hover:text-[#090A0C] transition-colors" />;
+  return <FaGlobe className="text-xs text-designColor group-hover:text-[#090A0C] transition-colors" />;
+};
 import Title from '../layouts/Title';
 import Card from './Card';
 import { featuresData } from '../../data/featuresData';
@@ -36,6 +44,7 @@ const Features = ({ setSelectedSubject }) => {
             des={item.des}
             icon={item.icon}
             onClick={() => setActiveService(item)}
+            className={item.id === 10 ? "xl:col-start-2" : ""}
           />
         ))}
       </div>
@@ -84,11 +93,41 @@ const Features = ({ setSelectedSubject }) => {
               {/* Details Content Body */}
               <div className="flex flex-col lgl:flex-row gap-8 my-8 overflow-y-auto pr-2">
                 {/* Left: Detailed Overview */}
-                <div className="w-full lgl:w-1/2 flex flex-col gap-4">
-                  <h3 className="text-lg font-semibold text-white font-titleFont">Service Overview</h3>
-                  <p className="text-gray-300 font-light text-sm md:text-base leading-relaxed font-bodyFont">
-                    {activeService.details}
-                  </p>
+                <div className="w-full lgl:w-1/2 flex flex-col gap-6">
+                  <div className="flex flex-col gap-2">
+                    <h3 className="text-lg font-semibold text-white font-titleFont">Service Overview</h3>
+                    <p className="text-gray-300 font-light text-sm md:text-base leading-relaxed font-bodyFont">
+                      {activeService.details}
+                    </p>
+                  </div>
+                  {activeService.workSamples && (
+                    <div className="flex flex-col gap-4 border-t border-white/5 pt-4">
+                      <h3 className="text-sm uppercase tracking-wider font-semibold text-designColor font-bodyFont">
+                        Work Samples & Managed Socials
+                      </h3>
+                      <div className="flex flex-col gap-3">
+                        {activeService.workSamples.map((sample, idx) => (
+                          <div key={idx} className="text-sm font-bodyFont">
+                            <p className="font-semibold text-white">{sample.client}</p>
+                            <div className="flex flex-wrap gap-2 mt-1.5">
+                              {sample.links.map((link, lIdx) => (
+                                <a
+                                  key={lIdx}
+                                  href={link.url}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="inline-flex items-center gap-1.5 text-designColor hover:text-[#090A0C] bg-designColor/5 hover:bg-designColor border border-designColor/20 hover:border-designColor px-3 py-1.5 rounded-full text-xs transition-all duration-300 font-medium group"
+                                >
+                                  {getPlatformIcon(link.platform)}
+                                  <span>{link.platform}</span>
+                                </a>
+                              ))}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
 
                 {/* Right: Bullet Focus & Deliverables */}

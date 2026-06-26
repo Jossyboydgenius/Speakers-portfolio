@@ -3,7 +3,6 @@ import { Link } from "react-scroll";
 import { FiMenu } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from "react-icons/fa";
-import { logo } from "../../assets/index";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinksdata = [
@@ -34,8 +33,11 @@ const Navbar = () => {
 
   return (
     <div className="w-full h-20 sticky top-0 z-50 bg-[#090A0C]/80 backdrop-blur-md mx-auto flex justify-between items-center font-bodyFont border-b border-white/5 px-4 md:px-8">
-      <div className="flex items-center">
-        <img className="h-10 w-auto object-contain cursor-pointer" src={logo} alt="logo" />
+      <div className="flex items-center gap-3 cursor-pointer">
+        <img className="h-10 w-10 rounded-full object-cover border border-designColor/40" src="/profilePhoto.png" alt="logo" />
+        <span className="text-white tracking-wider text-sm md:text-base italic font-titleFont font-medium">
+          Nana Aba
+        </span>
       </div>
       <div>
         <ul className="hidden mdl:inline-flex items-center gap-6 lg:gap-8">
@@ -100,7 +102,12 @@ const Navbar = () => {
               >
                 <div className="flex flex-col gap-6">
                   <div className="flex justify-between items-center border-b border-white/5 pb-4">
-                    <img className="h-8 w-auto" src={logo} alt="logo" />
+                    <div className="flex items-center gap-2">
+                      <img className="h-8 w-8 rounded-full object-cover border border-designColor/40" src="/profilePhoto.png" alt="logo" />
+                      <span className="text-white tracking-wider text-xs md:text-sm italic font-titleFont font-medium">
+                        Nana Aba
+                      </span>
+                    </div>
                     <span
                       onClick={() => setShowMenu(false)}
                       className="text-2xl text-gray-400 hover:text-designColor cursor-pointer transition-colors duration-300"
@@ -137,7 +144,7 @@ const Navbar = () => {
                     Find me in
                   </h2>
                   <div className="flex gap-3">
-                    <a href="https://www.linkedin.com/in/helena-amoah" target="_blank" rel="noopener noreferrer">
+                    <a href="http://surl.li/sodnm" target="_blank" rel="noopener noreferrer">
                       <span className="bannerIcon">
                         <FaLinkedinIn />
                       </span>
